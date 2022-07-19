@@ -1,0 +1,93 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+}
+
+.button {
+  display: inline-block;
+  padding: 17px 54px;
+  width: 251px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $main-font;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: $basic-white;
+  background-color: $color-button;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: 0.6s;
+  transition-property: all;
+  user-select: none;
+
+  &:hover {
+    background-image: linear-gradient(180deg, $color-button 0%, $hover-button 100%,
+      $button-special 100%);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($basic-black, 0.6);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 744px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 375px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

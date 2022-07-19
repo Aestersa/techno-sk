@@ -1,0 +1,137 @@
+.consultation {
+  min-height: 340px;
+  background-image: url("../img/background-modal.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: $color-light-bg;
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    background-size: auto;
+  }
+}
+
+.consultation__container {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  column-gap: 100px;
+  padding: 41px 254px 40px 272px;
+  letter-spacing: -0.95px;
+
+  @media (max-width: $tablet-width) {
+    padding: 41px 40px 37px 40px;
+    column-gap: 92px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    padding: 20px 40px;
+  }
+}
+
+.consultation h2 {
+  grid-column: 1/2;
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+  color: $basic-grey;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 19px;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 0.25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.consultation p {
+  grid-column: 1/2;
+  margin: 0;
+  letter-spacing: 0.44px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-grey;
+  text-size-adjust: none;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 21px;
+  }
+}
+
+.consultation__form {
+  position: relative;
+  grid-column: 2/3;
+  grid-row: 1/5;
+
+  &::after {
+    position: absolute;
+    top: 25px;
+    right: 16px;
+    content: "";
+    width: 12px;
+    height: 7px;
+    background-image: url("../img/svg/arrow.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
+
+    &::after {
+      right: 33px;
+    }
+  }
+}
+
+.consultation__form select,
+.consultation__form input {
+  width: 251px;
+  height: 50px;
+  margin-bottom: 10px;
+  padding: 8px 13px;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.44px;
+  color: $light-grey;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba($basic-black, 0.15);
+
+  @media (max-width: $tablet-width) {
+    height: 40px;
+    padding: 8px 17px;
+  }
+}
+
+.consultation__form select {
+  cursor: pointer;
+  appearance: none;
+}
+
+.consultation__form input:last-of-type {
+  margin-bottom: 20px;
+}
+
+.consultation__form button {
+  padding: 17px 45px;
+  box-shadow: 0 4px 20px rgba($basic-black, 0.15);
+}

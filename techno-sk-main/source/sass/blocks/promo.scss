@@ -1,0 +1,134 @@
+.promo {
+  display: grid;
+  grid-template-columns: 1fr 717px;
+  column-gap: 65px;
+  padding-top: 44px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr 372px;
+    column-gap: 32px;
+    padding-top: 0;
+    padding-bottom: 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.no-js .promo__button {
+  display: none;
+}
+
+.promo__title {
+  grid-column: 1/2;
+  margin: 0 100px 0 0;
+  font-size: 36px;
+  line-height: 100%;
+  color: $basic-grey;
+
+  @media (max-width: $tablet-width) {
+    grid-column: 1/3;
+    margin-right: 300px;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 65px;
+    margin-bottom: 18px;
+  }
+}
+
+.promo p {
+  grid-column: 1/2;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: $basic-grey;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 20px;
+
+    &:first-of-type {
+      margin-bottom: 20px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    line-height: 16px;
+    margin-bottom: 15px;
+
+    &:first-of-type {
+      margin-bottom: 14px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 17px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.promo__img {
+  grid-column: 2/3;
+  grid-row: 1/6;
+  padding-top: 5px;
+
+  @media (max-width: $tablet-width) {
+    grid-row: 2/5;
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-column: 1/2;
+    margin-bottom: 16px;
+  }
+}
+
+.promo__img img {
+  @media (max-width: $tablet-width) {
+    width: 372px;
+    height: 248px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 315px;
+    height: 210px;
+  }
+}
+
+.promo button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 50px;
+  margin-top: 17px;
+  margin-bottom: 22px;
+  filter: drop-shadow(0 4px 20px rgba($basic-black, 0.15));
+
+  @media (max-width: $tablet-width) {
+    padding: 17px 52px;
+    margin-top: 31px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-column: 1/2;
+    margin: 0 auto 20px;
+  }
+}
+
+.promo img {
+  border-radius: 20px;
+}

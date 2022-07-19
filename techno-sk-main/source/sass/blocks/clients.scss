@@ -1,0 +1,156 @@
+.clients {
+  padding-top: 44px;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: inherit;
+  padding-bottom: 32px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 34px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 16px;
+  }
+}
+
+.clients h2 {
+  margin: 0 0 6px;
+  font-size: 34px;
+  line-height: 48px;
+  letter-spacing: 0.25px;
+  color: $basic-grey;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 10px;
+    font-size: 26px;
+    line-height: 140.62%;
+    text-size-adjust: none;
+  }
+}
+
+.clients__slider {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.no-js .clients__slider {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: inherit;
+}
+
+.no-js .clients__list {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 1199px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 725px;
+  }
+}
+
+.clients__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  list-style: none;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 55px;
+  }
+
+  @media (max-width: 400px) {
+    padding-left: 8px;
+  }
+}
+
+.clients__item {
+  margin-right: 75px;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 41px;
+    width: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 35px;
+    width: 140px;
+  }
+}
+
+
+.clients__img {
+  object-fit: cover;
+
+  &--lampa,
+  &--la-salute,
+  &--nemo,
+  &--pharaont,
+  &--razdva,
+  &--seven-fridays,
+  &--bonsai,
+  &--jazz-cafe {
+    height: 100px;
+    object-fit: contain;
+  }
+
+  &--c {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 140px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  @media (max-width: $mobile-width) {
+    &--lampa,
+    &--la-salute,
+    &--nemo,
+    &--pharaont,
+    &--razdva,
+    &--seven-fridays,
+    &--bonsai,
+    &--jazz-cafe {
+      height: 100px;
+    }
+  }
+}
+
+.clients__item:hover {
+  .clients__img {
+    display: none;
+  }
+
+  .clients__img--c {
+    display: block;
+  }
+}
+
+.clients__item:nth-child(8) img {
+  object-fit: contain;
+}
